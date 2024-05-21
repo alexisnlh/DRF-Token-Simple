@@ -11,17 +11,20 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-from .secrets import secret_key
+import json
+from dotenv import load_dotenv
+
+# Load config from .env file
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret_key
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,7 +32,7 @@ DEBUG = False
 # Variable para deshabilitar la vista de Django admin (True: activada, False: desactivada)
 ADMIN_ENABLED = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = json.loads(os.environ['DJANGO_ALLOWED_HOSTS'])
 
 # Application definition
 BASE_APPS = []
