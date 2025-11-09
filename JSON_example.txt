@@ -1,0 +1,13 @@
+// Consultar para registrar usuarios [método POST]
+{
+    "username": "user123",
+    "password": "test123",
+    "email": "testuser@email.com"
+}
+
+
+// Consulta para el login del usuario [método POST]
+{
+    "username": "user123",
+    "password": "test123"
+}
