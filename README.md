@@ -13,6 +13,23 @@ Este proyecto implementa un sistema de autenticación completo que incluye regis
 
 Ambas implementaciones demuestran cómo lograr los mismos resultados con diferentes enfoques de programación en Django REST Framework.
 
+<a id="tabla-de-contenidos"></a>
+## 📋 Tabla de Contenidos
+
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [Instalación](#instalación)
+- [Endpoints](#endpoints)
+- [Ejemplos de Uso](#ejemplos-de-uso)
+- [Probando con cURL](#curl)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Seguridad](#seguridad)
+- [Aprendizaje](#aprendizaje)
+- [Licencia](#licencia)
+- [Autor](#autor)
+- [Agradecimientos](#agradecimientos)
+
+<a id="características"></a>
 ## ✨ Características
 
 - ✅ Registro de usuarios
@@ -24,6 +41,7 @@ Ambas implementaciones demuestran cómo lograr los mismos resultados con diferen
 - ✅ Código ampliamente comentado para facilitar el aprendizaje
 - ✅ Base de datos SQLite incluida
 
+<a id="tecnologías"></a>
 ## 🛠️ Tecnologías
 
 - **Python 3.x**
@@ -32,6 +50,7 @@ Ambas implementaciones demuestran cómo lograr los mismos resultados con diferen
 - **SQLite**
 - **Token Authentication (DRF authtoken)**
 
+<a id="instalación"></a>
 ## 📦 Instalación
 
 ### 1. Clonar el repositorio
@@ -73,6 +92,9 @@ python manage.py runserver
 
 El servidor estará disponible en `http://127.0.0.1:8000/`
 
+**[⬆ back to top](#tabla-de-contenidos)**
+
+<a id="endpoints"></a>
 ## 🔌 Endpoints
 
 ### Aplicación `func` (Function-Based Views)
@@ -91,6 +113,9 @@ El servidor estará disponible en `http://127.0.0.1:8000/`
 | POST | `/class/login` | Login y obtención de token | No requerida |
 | GET | `/class/profile` | Perfil del usuario autenticado | Token requerido |
 
+**[⬆ back to top](#tabla-de-contenidos)**
+
+<a id="ejemplos-de-uso"></a>
 ## 📝 Ejemplos de Uso
 
 ### Registro de Usuario
@@ -158,6 +183,9 @@ Authorization: Token 9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b
 }
 ```
 
+**[⬆ back to top](#tabla-de-contenidos)**
+
+<a id="curl"></a>
 ## 🧪 Probando con cURL
 
 ### Registro
@@ -180,6 +208,9 @@ curl -X GET http://127.0.0.1:8000/func/profile \
   -H "Authorization: Token TU_TOKEN_AQUI"
 ```
 
+**[⬆ back to top](#tabla-de-contenidos)**
+
+<a id="estructura-del-proyecto"></a>
 ## 📂 Estructura del Proyecto
 
 ```
@@ -198,6 +229,7 @@ drf-token-simple/
 └── manage.py
 ```
 
+<a id="seguridad"></a>
 ## 🔐 Seguridad
 
 - Los tokens se generan automáticamente al crear un usuario
@@ -205,6 +237,7 @@ drf-token-simple/
 - Los endpoints de perfil están protegidos y requieren autenticación
 - Se valida que el usuario exista antes de generar tokens
 
+<a id="aprendizaje"></a>
 ## 📚 Aprendizaje
 
 Este proyecto es ideal para:
@@ -214,16 +247,19 @@ Este proyecto es ideal para:
 - Comprender el flujo de registro, login y autorización
 - Ver código comentado y documentado para facilitar el aprendizaje
 
+<a id="licencia"></a>
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
+<a id="autor"></a>
 ## 👤 Autor
 
 **Alexis NLH**
 
 - GitHub: [@alexisnlh](https://github.com/alexisnlh)
 
+<a id="agradecimientos"></a>
 ## 🙏 Agradecimientos
 
 - [Fazt Code](https://www.youtube.com/c/FaztCode) por el tutorial original
@@ -232,3 +268,5 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ---
 
 ⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub
+
+**[⬆ back to top](#tabla-de-contenidos)**
